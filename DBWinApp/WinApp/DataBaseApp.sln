@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinAPI", "WinApp\WinAPI.csproj", "{3705FF1B-68D0-4C5B-B34B-0367473FF53D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseLib", "DataBaseLib\DataBaseLib.csproj", "{C414DAB3-9BF8-41B7-B1BF-CAFC221D21F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3705FF1B-68D0-4C5B-B34B-0367473FF53D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3705FF1B-68D0-4C5B-B34B-0367473FF53D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3705FF1B-68D0-4C5B-B34B-0367473FF53D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3705FF1B-68D0-4C5B-B34B-0367473FF53D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C414DAB3-9BF8-41B7-B1BF-CAFC221D21F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C414DAB3-9BF8-41B7-B1BF-CAFC221D21F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C414DAB3-9BF8-41B7-B1BF-CAFC221D21F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C414DAB3-9BF8-41B7-B1BF-CAFC221D21F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C0EE3FD-6801-4E6C-BECD-FA53729F7B28}
+	EndGlobalSection
+EndGlobal
