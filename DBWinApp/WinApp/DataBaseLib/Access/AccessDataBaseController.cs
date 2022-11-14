@@ -38,16 +38,16 @@ namespace DataBaseLib.Access
         {
             using (OleDbConnection connection = new OleDbConnection(_connectionString))
             {
-                try
-                {
+                //try
+                //{
                     connection.Open();
                     OleDbCommand command = new OleDbCommand(query, connection);
                     command.ExecuteNonQuery();
-                }
-                catch
-                {
-                    throw new Exception("Соединение не было установлено!");
-                }
+                //}
+                //catch
+                //{
+                //    throw new Exception("Соединение не было установлено!");
+                //}
             }
         }
     }

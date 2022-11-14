@@ -22,7 +22,11 @@ public class DataBaseCommadsManager
         ITableEditorCommand command;
         switch(tableName)
         {
-            case "Клиент": command = new Table1Commands();
+            case "Информация о клиенте": command = new Table1Commands();
+                break;
+            
+            case "Приемы":
+                command = new Table1Commands();
                 break;
             default: throw new Exception("Ошибка!");
         }        
@@ -33,12 +37,32 @@ public class DataBaseCommadsManager
         ITableEditorCommand command;
         switch (tableName)
         {
-            case "Клиент":
+            case "Информация о клиенте":
+                command = new Table1Commands();
+                break;
+            case "Приемы":
                 command = new Table1Commands();
                 break;
             default: throw new Exception("Ошибка!");
         }
         command.Delete(args);
+
+    }
+    public void Update(string[] args, string tableName)
+    {
+        ITableEditorCommand command;
+        switch (tableName)
+        {
+            case "Информация о клиенте":
+                command = new Table1Commands();
+                break;
+            case "Приемы":
+                command = new Table1Commands();
+                break;
+            default: throw new Exception("Ошибка!");
+        }
+        command.Update(args);
+
     }
 
     // Домашнее задание

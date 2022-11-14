@@ -17,7 +17,7 @@ namespace WinAPI.DBEditor
         {
             InitializeComponent();
         }
-        string _tableName = "Клиент";
+        string _tableName = "Информация о клиенте";
 
         private void Table1_Load(object sender, EventArgs e)
         {
@@ -31,7 +31,7 @@ namespace WinAPI.DBEditor
             args[0] = textBox2.Text;
             args[1] = textBox3.Text;
             args[2] = textBox4.Text;
-            args[3] = textBox5.Text;
+            //args[3] = textBox5.Text;
             
 
             DataBaseCommadsManager manager = new DataBaseCommadsManager();
@@ -54,7 +54,43 @@ namespace WinAPI.DBEditor
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            // дома
+            int currentRow = dataGridView1.CurrentCell.RowIndex;
+            string[] args = new string[4];
+            args[0] = dataGridView1[0, currentRow].Value.ToString();
+            args[1] = textBox2.Text;
+            args[2] = textBox3.Text;
+            args[3] = textBox4.Text;
+            button1.Enabled = true;
+            button2.Enabled = true;
+            DataBaseCommadsManager manager = new DataBaseCommadsManager();
+            manager.Update(args, _tableName);
+            dataGridView1.DataSource = manager.GetDataTable(_tableName);
+
         }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int currentRow = dataGridView1.CurrentCell.RowIndex;
+            if (button3.Text == "Режим редактирования")
+            {
+                button1.Enabled = false;
+                button2.Enabled = false;
+                button3.Text = "Выйти из режима редактирования";
+                textBox1.Text = dataGridView1[0, currentRow].Value.ToString();
+                textBox2.Text = dataGridView1[1, currentRow].Value.ToString();
+                textBox3.Text = dataGridView1[2, currentRow].Value.ToString();
+                textBox4.Text = dataGridView1[3, currentRow].Value.ToString();
+
+            }
+                
+            else
+            {
+                button3.Text = "Режим редактирования";
+                button1.Enabled = true;
+                button2.Enabled = true;
+            }
+              
+        }
+
+       
     }
 }

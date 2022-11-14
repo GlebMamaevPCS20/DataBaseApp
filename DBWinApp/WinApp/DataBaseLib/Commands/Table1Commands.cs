@@ -25,7 +25,7 @@ namespace DataBaseLib.Commands
 
         public void Insert(string[] args)
         {            
-            string query = $"INSERT INTO [Клиент] " +
+            string query = $"INSERT INTO [Информация о клиенте] " +
                     $"([ФИО], [Адресс], [Телефон], [Заказ]) " +
                     $"VALUES ('{args[0]}', '{args[1]}', '{args[2]}', '{args[3]}')";
             controller.ExecuteCommand(query);
@@ -34,6 +34,10 @@ namespace DataBaseLib.Commands
 
         public void Update(string[] args)
         {
+            string query = @$"UPDATE [Информация о клиенте] 
+                    SET [ФИО] = {args [1]}, [Адресс] = {args[2]},  [Телефон] = '{args[3]}', [Заказ] = '{args[4]}'  
+                    WHERE [Код клиента] = {args[0]}";
+            controller.ExecuteCommand(query);
 
             // дома
 
@@ -48,8 +52,8 @@ namespace DataBaseLib.Commands
         {
             
             
-            string query = $"DELETE FROM [Клиент] " +
-                    $"WHERE [Код] = {args[0]}";
+            string query = $"DELETE FROM [Информация о клиенте] " +
+                    $"WHERE [Код клиента] = {args[0]}";
             controller.ExecuteCommand(query);
            
             
